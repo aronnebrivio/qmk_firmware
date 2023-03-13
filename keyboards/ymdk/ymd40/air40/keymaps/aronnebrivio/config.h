@@ -1,0 +1,2 @@
+// Enable RBG heatmap
+#define RGB_MATRIX_FRAMEBUFFER_EFFECTS
