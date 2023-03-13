@@ -33,3 +33,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             _______, _______, _______, _______, _______, RGB_TOG, _______, _______, _______, _______, _______
         )
 };
+
+// Change caps lock key to red when caps lock is on
+bool rgb_matrix_indicators_user(void) {
+    if (host_keyboard_led_state().caps_lock) {
+        rgb_matrix_set_color(49, 255, 0, 0); //capslock key
+    }
+
+    return false;
+}
